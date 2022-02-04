@@ -1,0 +1,397 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: black;
+    resize: none;
+}
+
+.nav {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 50px;
+    background-color: #FAEA5C;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+.nav>*>* {
+    margin: 5px;
+}
+
+.nav>*:first-child {
+    margin-left: 5px;
+}
+
+.nav>#account {
+    position: absolute;
+    right: 0px;
+    display: flex;
+    align-items: center;
+}
+
+.nav>#account>img {
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.body {
+    padding-top: 55px;
+    width: 90%;
+    margin: auto;
+    display: flex;
+}
+
+.form {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form>form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form textarea {
+    width: 80vw;
+    height: 10vw;
+    padding: .5vw;
+    font-size: 1.5vw;
+    border-radius: 15px;
+    border: rgba(200, 200, 200, 1) 1px solid;
+}
+
+.form input[type="submit"] {
+    background-color: white;
+    padding: .5vw;
+    margin: .5vw;
+    font-size: 2vw;
+    border: rgba(200, 200, 200, 1) 1px solid;
+}
+
+.form>#image_select_container:not(.content) {
+    height: 300px;
+    margin-top: 5%;
+    margin-bottom: 2.5%;
+    justify-content: center;
+    border: rgba(200, 200, 200, 1) 3px dashed;
+    border-radius: 15px;
+}
+
+.form>#image_select_container:where(.content) {
+    margin-bottom: 2.5%;
+    justify-content: center;
+}
+
+.form>#image_select_container>input[type="file"] {
+    opacity: 0;
+}
+
+.form>#image_select_container>label {
+    position: absolute;
+    background-color: #FAEA5C;
+    border-radius: 10px;
+    padding: 10px;
+    margin: auto;
+}
+
+.form>#image_select_container>img {
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 15px;
+    padding: 0px;
+    border: rgba(200, 200, 200, 1) 3px dashed;
+    min-height: 20vh;
+    min-width: 20vh;
+    max-width: 80vw;
+    max-height: 80vw;
+}
+
+#posts {
+    width: 100%;
+}
+
+.posts:first-of-type {
+    margin-right: 1vw;
+}
+
+.post {
+    border: 1px black solid;
+    margin-top: 5px;
+    margin-bottom: 1vw;
+    background-color: white;
+}
+
+.post>.content {
+    width: 100%;
+}
+
+.post>.content>.image_container>* {
+    width: 90%;
+}
+
+.post>.content>p {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.post>textarea {
+    width: 90%;
+    height: 100px;
+    border: 1px black solid;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: white;
+    padding: 100px;
+}
+
+.post>.header {
+    display: flex;
+    width: 90%;
+    padding: 10px 10% 10px 10%;
+}
+
+.user_header {
+    height: 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user_header>.author>.name {
+    margin-left: 15px;
+    font-size: 300%;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.avatar {
+    border-radius: 100%;
+    border: 1.5px solid black;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.user_header>.author>.avatar {
+    height: 9vw;
+    width: 9vw;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.header>.author>.avatar {
+    height: 4vw;
+    width: 4vw;
+    margin: 5px;
+}
+
+.comment>.author>.avatar {
+    height: 30px;
+    width: 30px;
+    margin: 3px;
+}
+
+.comments {
+    width: 90%;
+    padding: 5px 10% 5px 10%;
+    margin-bottom: 10px;
+}
+
+.comments>.comment {
+    border: 1px gray solid;
+    margin: 10px 50px 10px 50px;
+    padding: 5px;
+}
+
+.comments>form {
+    height: 100px;
+    margin-top: 10px
+}
+
+.comments>form>textarea {
+    border: 1px gray solid;
+    width: 100%;
+    height: 100px;
+    padding: 0 10px 0 10px;
+}
+
+.comments>form>input[type="submit"] {
+    position: relative;
+    width: 8%;
+    height: 35px;
+    left: 93%;
+    top: -48px;
+    background-color: #FAEA5C;
+    border: none;
+}
+
+.up_down {
+    margin-left: auto;
+}
+
+.up_down * {
+    width: 1.5vw;
+}
+
+.up_down>a {
+    display: flex;
+}
+
+.up_down>p {
+    text-align: center;
+    font-size: 2vw;
+}
+
+#userDropdown {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: 5px;
+    top: 55px;
+    background-color: white;
+    box-shadow: 0px 0px 4px 1px #888888;
+}
+
+#userDropdown>* {
+    background-color: white;
+    padding: 8px;
+}
+
+#userDropdown>*:hover {
+    background-color: rgb(240, 240, 240);
+}
+
+#userDropdown>*:active {
+    background-color: rgb(220, 220, 220);
+}
+
+.login_container {
+    background-color: white;
+    width: 50%;
+    border-radius: 50px;
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login_container *:not(.error) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    font-size: 30px;
+}
+
+.login_container .error {
+    font-size: 15px;
+    margin: 0px;
+}
+
+.big_header {
+    font-size: 8vw;
+    padding: 4%;
+}
+
+#sortOpenBtn {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: 5vw;
+    padding: 8px;
+    top: 55px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 0px 4px 1px #888888;
+}
+
+#sortByDropdown {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: 5vw;
+    top: 95px;
+    box-shadow: 0px 0px 4px 1px #888888;
+    background-color: white;
+}
+
+#sortByDropdown>* {
+    background-color: white;
+    height: 30px;
+    padding-right: 5px;
+    width: 85px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+#sortByDropdown>*:hover {
+    background-color: rgb(240, 240, 240);
+}
+
+#sortByDropdown>*:active {
+    background-color: rgb(220, 220, 220);
+}
+
+.icon {
+    height: 40px;
+}
+
+.time {
+    color: rgb(107, 107, 107)
+}
+
+.hide {
+    display: none !important;
+}
+
+.half {
+    width: 50%;
+}
+
+.full {
+    width: 90%;
+}
+
+.error {
+    color: red;
+}
+
+.vertical {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+
+.row>*:not(:last-child) {
+    margin-right: 10px;
+}
+
+.center_text {
+    text-align: center;
+}
+
+.marker {
+    height: 90%;
+    width: auto;
+}
